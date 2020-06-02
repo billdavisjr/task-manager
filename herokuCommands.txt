@@ -1,0 +1,16 @@
+heroku login
+
+$ heroku login
+
+heroku apps
+
+# connect our local git repo to the remote repo on Heroku's git.
+heroku git:remote -a <repo-name>
+
+# to view the heroku logs if app doesn't load etc
+heroku logs --tail
+
+# start the app:
+
+heroku ps:scale web=1
+
