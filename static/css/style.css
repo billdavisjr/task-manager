@@ -2,7 +2,6 @@ body {
     background-color: rgb(187, 216, 187);
 }
 
-  
 .btn_small {
     height: 24px;
     width: 60px;
@@ -12,5 +11,12 @@ body {
 }
 
 .task_header {
-    margin-top: 5px;
+    margin-top: 8px;
+}
+
+.apptitle {
+    font-family: Impact, Helvetica, sans-serif;
+}
+.collapsible-body {
+    background-color: bisque;
 }

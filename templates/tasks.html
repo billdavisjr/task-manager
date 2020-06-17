@@ -1,27 +1,29 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%} 
 {% block content %}
+<div class="row">
     <ul class="collapsible" data-collapsible="accordion">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header">
-                <div class= "col s3">
+                <div class="task_header col s6">
                     <i class="material-icons">expand_more</i>
-                    <a class="waves-effect waves-light btn btn-small"><i class="material-icons left">done</i>Done</a>
-                    <a class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+                    <strong>{{task.task_name}}</strong>
                 </div>
-                <div class=" task_header col s9">
-                    <strong>{{task.task_name}}</strong> - {{task.due_date}}
+                <div class="task_header col s3">
+                    {{task.due_date}}
+                </div>
+                <div class="col s3 right">
+                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    <a class="waves-effect waves-light btn btn_small blue">Edit</a>
                 </div>
             </div>
             <div class="collapsible-body">
                 <span>
-                    <em>{{task.task_description}}</em>
+                     {{task.task_description}} 
                 </span>
-                <hr/>
-                <div><strong>Category:</strong> {{task.category_name}}</div> 
-                <div><strong>Urgent:</strong> {{task.is_urgent}}</div>                
             </div>
         </li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

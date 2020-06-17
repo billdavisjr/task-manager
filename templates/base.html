@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Task-Manager</title>
+        <title>Task Manager</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
-
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
     </head>
     <body>
-        <h5> TASK MANAGER</h5>
-        {% block content %}
-        {% endblock %}
-
+        <h5 class="center apptitle">TASK MANAGER</h5>
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
+å            $(document).ready(function() {
                 $('.collapsible').collapsible();
                 $('select').material_select();
-            })
+            });
 
             $('.datepicker').pickadate({
                 selectMonths: true, // Creates a dropdown to control month
@@ -27,13 +26,12 @@
                 clear: 'Clear',
                 close: 'Ok',
                 closeOnSelect: false // Close upon selecting a date,
-            });
 
-            // datepicker bug fix for Chrome
-            document.getElementById("matfix").addEventListener("click", function(e) {
-                  e.stopPropagation();
+                // datepicker bug fix for Chrome
+                document.getElementById("matfix").addEventListener("click", function(e) {
+                    e.stopPropagation();
+                });
             });
-
         </script>
     </body>
-</html> 
+</html>
