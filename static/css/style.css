@@ -9,3 +9,11 @@
 .task_header {
     margin-top: 5px;
 }
+
+.tmheading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: goldenrod
+}
