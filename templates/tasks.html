@@ -12,7 +12,7 @@
                     <strong>{{task.due_date}}</strong>
                 </div>
                 <div class="task_header col s4">
-                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    <a href="{{url_for('delete_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small">Done</a>
                     <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
                 </div>
             </div>
@@ -25,4 +25,14 @@
         {% endfor %}
     </ul>
 </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating green darken-1 tooltipped" href="" data-position="left" data-tooltip="coming soon"><i class="material-icons"> format_quote</i></a></li>
+            <li><a class="btn-floating blue tooltipped"  href="{{ url_for('add_task') }}" data-position="left" data-tooltip="Add a new task"><i class="material-icons">add</i></a></li>
+        </ul>
+    </div>
+
 {% endblock %}
