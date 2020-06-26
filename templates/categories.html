@@ -19,15 +19,4 @@
 
     </ul>
 </div>
-<div class="fixed-action-btn">
-    <a class="btn-floating btn-large red">
-        <i class="large material-icons">mode_edit</i>
-    </a>
-    <ul>
-        <li><a class="btn-floating yellow darken-1 tooltipped" href="{{ url_for('get_tasks') }}"  data-position="left" data-tooltip="View Tasks"><i class="material-icons"> format_quote</i></a></li>
-        <li><a class="btn-floating green darken-1 tooltipped" href="{{ url_for('get_categories') }}"  data-position="left" data-tooltip="View Categories"><i class="material-icons">categories</i></a></li>
-        <li><a class="btn-floating blue tooltipped"  href="{{ url_for('add_task') }}" data-position="left" data-tooltip="Add a new task"><i class="material-icons">add</i></a></li>
-    </ul>
-</div>
-
 {% endblock %}
