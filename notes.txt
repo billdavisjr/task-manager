@@ -1,3 +1,10 @@
+MONGO DB
+
+ 'mongodb+srv://root:r00tUser@cluster0-oxfue.mongodb.net/tasks_manager?retryWrites=true&w=majority')
+ 'mongodb://localhost'
+
+
+_______________________________________________________________________________________________________
 HEROKU
 
 Deploy using Heroku Git
@@ -26,3 +33,4 @@ For existing repositories, simply add the heroku remote
 $ heroku git:remote -a task-manager-bill-davis
 
 see also script.sh for how to set up to git push to both github and heroku
+_____________________________________________________________________________________________________
